@@ -1,0 +1,62 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 10px;
+}
+.main{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+}
+.left,.right{
+  width: 5rem;
+  height: 5rem;
+  color: white;
+  background: black;
+  border-radius: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  font-size: 3rem;
+  z-index: 100;
+}
+.left.active{
+  background: #DEDEDE;
+  cursor: none;
+  opacity: 0.3;
+}
+.right.active{
+  background: #DEDEDE;
+  pointer-events: none;
+  opacity: 0.3;
+}
+.right{
+  right: 1rem;
+}
+.left{
+  left: 1rem;
+}
+.carousel{
+  width: 90vw;
+  height: 30vh;
+  position: absolute;
+  top: 50%;
+  left: 200%;
+  transform: translate(-50%,-50%);
+  background: #EA8BCF;
+  display: grid;
+  place-items: center;
+  transition: all 0.5s ease-in-out;
+}
+.carousel:nth-child(1){
+  left: 50%;
+}
